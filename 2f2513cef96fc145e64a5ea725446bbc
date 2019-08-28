@@ -1,0 +1,74 @@
+/*Calender of 2015*/
+#include<stdio.h>
+#include<conio.h>
+void main ()
+{
+int a,b=0,c=4,d=0,e=1;
+printf("enter Month no.:\n");
+scanf("%d",&a);
+if(a<=12)
+{
+printf("  ****************2015*************\n");
+printf("  SUN  MON  TUE  WED  THU  FRI  SAT\n");
+for(b=1;b<a;b++){
+     if(b==1||b==3||b==5||b==7||b==8||b==10||b==12){
+	   c=c+31;
+	   }
+     else
+       if(b==4||b==6||b==9||b==11){
+	   c=c+30;
+	   }
+     else
+       if(b=2){
+	   c=c+28;
+	   }
+       }
+d=c%7;
+for(b=1;b<=d;b++){
+     printf("     ");
+     }
+for(b=1;b<=7-d;b++){
+     printf("%5d",e);
+     e++;
+     } printf("\n");
+if(a==1||a==3||a==5||a==7||a==8||a==10||a==12){
+     for(c=1;c<=5;c++){
+
+		for(b=1;b<=7;b++){
+			if(e<=31)
+		    {
+		    printf("%5d",e);
+		     }e++;
+		    }
+
+		printf("\n");
+	    }
+	}
+if(a==4||a==6||a==9||a==11){
+     for(c=1;c<=5;c++){
+
+		for(b=1;b<=7;b++){
+		   if(e<=30)
+		   {
+		    printf("%5d",e);
+		    e++;
+		    }
+	}
+		printf("\n");
+	      }
+       }
+if(a==2){
+ for(c=1;c<=5;c++){
+		for(b=1;b<=7;b++){
+		    if(e<=28){
+			printf("%5d",e);
+		}
+			e++;
+		    }
+		printf("\n");
+	    }
+	}
+}else
+printf("!!ENTER VALID MONTH!!");
+	getch();
+	}
